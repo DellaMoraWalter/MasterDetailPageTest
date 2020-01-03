@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+    x:Class="MasterDetailPageTest.App"
+    >
+    
+    <Application.Resources>
+
+        
+        
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="LightSalmon"></Setter>
+        </Style>
+
+        
+        
+        <Style TargetType="Page"
+               Class="PageWithNavigationBar"
+               ApplyToDerivedTypes="True"
+               >
+            <Setter Property="NavigationPage.TitleView">
+                <Setter.Value>
+                    <StackLayout 
+                            Orientation="Horizontal"
+                            BackgroundColor="Transparent"
+                            Spacing="0"
+                            HeightRequest="50"
+                            >
+
+                        <Label Text="Some text"/>
+
+                    </StackLayout>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+        
+        <Style TargetType="ContentPage" x:Key="st_Page">
+            <Setter Property="NavigationPage.TitleView">
+                <Setter.Value>
+                    <StackLayout 
+                            Orientation="Horizontal"
+                            BackgroundColor="Transparent"
+                            Spacing="0"
+                            HeightRequest="50"
+                            >
+
+                        <Label Text="Some text"/>
+
+                    </StackLayout>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        
+        
+        <ControlTemplate x:Key="ct_PageTitleView">
+            <StackLayout
+                Orientation="Horizontal"
+                BackgroundColor="Transparent"
+                Spacing="0"
+                HeightRequest="50"
+                >
+
+                <Label Text="Some text"/>
+
+            </StackLayout>
+        </ControlTemplate>
+
+        
+        
+    </Application.Resources>
+</prism:PrismApplication>
